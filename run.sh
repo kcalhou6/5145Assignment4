@@ -42,6 +42,6 @@ for t in 1 2 4 8 16; do ./first 100000000 0 $t 0; done
 #Time complexity pos with 1, 2, 4, 8, 16 threads
 for t in 1 2 4 8 16; do ./first 100000000 70234 $t 1; done
 
-g++ PrefixSum_A4.cpp -0 prefix -fopenmp -O3 -march=native -std=gnu++0x
+g++ PrefixSum_A4.cpp -o prefix -fopenmp -O3 -march=native -std=gnu++0x
 # prefix sum of array length 10^9 for 1 2 4 8 16 threads
 for to in 1 2 4 8 16; do ./prefix 1000000000 $t; done
