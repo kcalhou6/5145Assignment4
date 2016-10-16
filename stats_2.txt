@@ -1,0 +1,160 @@
+Reduce_A4
+Sequential runtime:0.0277193
+min: 955
+Static Scheduling using 1 threads
+runtime: 0.0275523
+speedup: 1.00606
+min: 955
+
+Reduce_A4
+Sequential runtime:0.0277088
+min: 40
+Static Scheduling using 2 threads
+runtime: 0.0245315
+speedup: 1.12952
+min: 40
+
+Reduce_A4
+Sequential runtime:0.0277048
+min: 40
+Static Scheduling using 4 threads
+runtime: 0.0237027
+speedup: 1.16885
+min: 40
+
+Reduce_A4
+Sequential runtime:0.0276949
+min: 1
+Static Scheduling using 8 threads
+runtime: 0.023682
+speedup: 1.16945
+min: 1
+
+Reduce_A4
+Sequential runtime:0.0433481
+min: 13
+Static Scheduling using 16 threads
+runtime: 0.021357
+speedup: 2.02969
+min: 13
+
+Reduce_A4
+Sequential runtime:0.0277398
+min: 416
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 1.23499
+speedup: 0.0224616
+min: 416
+
+Reduce_A4
+Sequential runtime:0.0277579
+min: 50
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 6.95472
+speedup: 0.00399124
+min: 50
+
+Reduce_A4
+Sequential runtime:0.0323935
+min: 40
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 8.89247
+speedup: 0.00364281
+min: 40
+
+Reduce_A4
+Sequential runtime:0.0277039
+min: 13
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 12.4615
+speedup: 0.00222316
+min: 13
+
+Reduce_A4
+Sequential runtime:0.0278418
+min: 416
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 15.6176
+speedup: 0.00178271
+min: 416
+
+Reduce_A4
+Sequential runtime:0.04554
+min: 40
+Dynamic Scheduling using 1 threads and granularity 1000
+runtime: 0.0490923
+speedup: 0.92764
+min: 40
+
+Reduce_A4
+Sequential runtime:0.027787
+min: 50
+Dynamic Scheduling using 2 threads and granularity 1000
+runtime: 0.0273803
+speedup: 1.01485
+min: 50
+
+Reduce_A4
+Sequential runtime:0.0278233
+min: 50
+Dynamic Scheduling using 4 threads and granularity 1000
+runtime: 0.0190599
+speedup: 1.45978
+min: 50
+
+Reduce_A4
+Sequential runtime:0.0277871
+min: 13
+Dynamic Scheduling using 8 threads and granularity 1000
+runtime: 0.0142679
+speedup: 1.94753
+min: 13
+
+Reduce_A4
+Sequential runtime:0.0277409
+min: 465
+Dynamic Scheduling using 16 threads and granularity 1000
+runtime: 0.0122301
+speedup: 2.26826
+min: 465
+
+Reduce_A4
+Sequential runtime:0.027937
+min: 40
+Dynamic Scheduling using 1 threads and granularity 100000
+runtime: 0.0277155
+speedup: 1.00799
+min: 40
+
+Reduce_A4
+Sequential runtime:0.0277598
+min: 40
+Dynamic Scheduling using 2 threads and granularity 100000
+runtime: 0.0196674
+speedup: 1.41146
+min: 40
+
+Reduce_A4
+Sequential runtime:0.0278251
+min: 1
+Dynamic Scheduling using 4 threads and granularity 100000
+runtime: 0.0125536
+speedup: 2.21651
+min: 1
+
+Reduce_A4
+Sequential runtime:0.0278988
+min: 13
+Dynamic Scheduling using 8 threads and granularity 100000
+runtime: 0.00864886
+speedup: 3.22572
+min: 13
+
+Reduce_A4
+Sequential runtime:0.0277465
+min: 170
+Dynamic Scheduling using 16 threads and granularity 100000
+runtime: 0.00796568
+speedup: 3.48325
+min: 170
+
