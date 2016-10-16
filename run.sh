@@ -1,25 +1,47 @@
-g++ Transform_A4.cpp -o transform -fopenmp #-O3 -march=native -std=gnu++0x
+g++ Transform_A4.cpp -o transform -fopenmp -O3 -march=native -std=gnu++0x
 # static scheduling with 1, 2, 4, 8, 16 threads
-./transform 100000000 1 0 #Sequential
-./transform 100000000 2 0
-./transform 100000000 4 0
-./transform 100000000 8 0
-./transform 100000000 16 0
+for t in 1 2 4 8 16; do ./transform 100000000 $t 0; done
 # dynamic,1 scheduling with  1, 2, 4, 8, 16 threads
-./transform 100000000 1 1
-./transform 100000000 2 1
-./transform 100000000 4 1
-./transform 100000000 8 1
-./transform 100000000 16 1
+for t in 1 2 4 8 16; do ./transform 100000000 $t 1 1; done
+# dynamic,1000000000 scheduling with  1, 2, 4, 8, 16 threads
+for t in 1 2 4 8 16; do ./transform 100000000 $t 1 1000; done
+# dynamic,100000000000 scheduling with  1, 2, 4, 8, 16 threads
+for t in 1 2 4 8 16; do ./transform 100000000 $t 1 100000; done
+
+g++ Reduce_A4.cpp -o reduce -fopenmp -O3 -march=native -std=gnu++0x
+# static scheduling with 1, 2, 4, 8, 16 threads
+for t in 1 2 4 8 16; do ./reduce 100000000 $t 0; done
+# dynamic,1 scheduling with  1, 2, 4, 8, 16 threads
+for t in 1 2 4 8 16; do ./reduce 100000000 $t 1 1; done
 # dynamic,1000 scheduling with  1, 2, 4, 8, 16 threads
-./transform 100000000 1 2
-./transform 100000000 2 2
-./transform 100000000 4 2
-./transform 100000000 8 2
-./transform 100000000 16 2
+for t in 1 2 4 8 16; do ./reduce 100000000 $t 1 1000; done
 # dynamic,100000 scheduling with  1, 2, 4, 8, 16 threads
-./transform 100000000 1 3
-./transform 100000000 2 3
-./transform 100000000 4 3
-./transform 100000000 8 3
-./transform 100000000 16 3
+for t in 1 2 4 8 16; do ./reduce 100000000 $t 1 100000; done
+
+g++ NumericalIntegration_A4.cpp -o integrate -fopenmp -O3 -march=native -std=gnu++0x
+# dynamic,1 scheduling with 1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^3 points and 10 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000 0 10 $t 1; done
+# dynamic,1 scheduling with 1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^3 points and 1000 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000 0 1000 $t 1; done
+# dynamic,1000 scheduling with 1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^3 points and 10 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000 0 10 $t 1000; done
+# dynamic,1000 scheduling with  1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^3 points and 1000 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000 0 1000 $t 1000; done
+# dynamic,1 scheduling with 1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^9 points and 10 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000000000 0 10 $t 1; done
+# dynamic,1 scheduling with 1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^9 points and 1000 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000000000 0 1000 $t 1; done
+# dynamic,1000 scheduling with 1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^9 points and 10 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000000000 0 10 $t 1000; done
+# dynamic,1000 scheduling with  1, 2, 4, 8, 16 threads (x^2 from 1 to 10 over 10^9 points and 1000 intensity)
+for t in 1 2 4 8 16; do ./integrate 1 10 1000000000 0 1000 $t 1000; done
+
+g++ FindFirst_A4.cpp -o first -fopenmp -O3 -march=native -std=gnu++0x
+#Time complexity n
+for t in 1 2 4 8 16; do ./first 100000000 0 $t 0; done
+#Time complexity pos with 1, 2, 4, 8, 16 threads
+for t in 1 2 4 8 16; do ./first 100000000 70234 $t 1; done
+
+g++ PrefixSum_A4.cpp -0 prefix -fopenmp -O3 -march=native -std=gnu++0x
+# prefix sum of array length 10^9 for 1 2 4 8 16 threads
+for to in 1 2 4 8 16; do ./prefix 1000000000 $t; done

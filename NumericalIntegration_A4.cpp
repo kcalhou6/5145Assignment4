@@ -26,10 +26,10 @@ double speedup(double t1, double tn) {
 // Either of which is looped to the value of intensity
 // A mutexPlace value of 0 will run with no loop scheduling
 double f(double x, int function, int intensity) {
-	double y = x;	
-	if (function == 0) 
+	double y = x;
+	if (function == 0)
 		for(int i = 0; i < intensity; i++)
-			y = pow(y, 2);
+			y = pow(y, 3);
 	else
 		for(int i = 0; i < intensity; i++)
 			y = sqrt(y);
@@ -51,53 +51,52 @@ int main(int argc, char *argv[]) {
 	double b = strtod(argv[2], NULL);
 
 	// Get argv[3] for number of points n
-	int n = (int)strtol(argv[3], NULL, 10);
+	int n = atoi(argv[3]);
 
 	// Get argv[4] for function
-	int function = (int)strtol(argv[4], NULL, 10);
+	int function = atoi(argv[4]);
 
 	// Get argv[5] for intensity
-	int intensity = (int)strtol(argv[5], NULL, 10);
+	int intensity = atoi(argv[5]);
 
 	// Get argv[6] for upper limit b
-	int numThreads = (int)strtol(argv[6], NULL, 10);
+	int numThreads = atoi(argv[6]);
 
 	// Set openMP num threads
 	omp_set_num_threads(numThreads);
-	
+
 	//Variables to calculate and write runtime to a file
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
-	
+
 	// Calculate sequential runtime and write to stats file
 	clock_gettime(CLOCK_REALTIME, &start);
-	double approx = 0;	
+	double approx = 0;
 	for(int i = 0; i < n; i++)
 		approx += (f(a + (i + 0.5) * (b - a) / n, function, intensity) * (b - a) / n);
 	clock_gettime(CLOCK_REALTIME, &end);
 	double t1 = runtime(start, end);
-	statFile << "NumericalIntegration_A4" << endl << "Sequential runtime:" << t1 << endl;
+	statFile << "NumericalIntegration_A4, number of points: " << n << endl << "Sequential runtime:" << t1 << endl;
 
 	// Set the schedule type to dynamic and granularity to argv[7]
 	int granularity = (int)strtol(argv[7], NULL, 10);
 	omp_set_schedule(omp_sched_dynamic, granularity);
-	
-	// Write schedule info to stats file		
+
+	// Write schedule info to stats file
 	statFile << "Dynamic Scheduling using " << numThreads << " threads and granularity " << granularity << endl;
 
-	// Mark time right before start of parallel loop
-	clock_gettime(CLOCK_REALTIME, &start);	
 	approx = 0;
+	// Mark time right before start of parallel loop
+	clock_gettime(CLOCK_REALTIME, &start);
 	// execute numerical integration in parallel with omp
 	#pragma omp parallel for reduction(+:approx)
-	for(int i = 0; i < n; i++) {
+	for(int i = 0; i < n; i++)
 		approx += (f(a + (i + 0.5) * (b - a) / n, function, intensity) * (b - a) / n);
-	}
 	// Mark time right after end of parallel loop
 	clock_gettime(CLOCK_REALTIME, &end);
 	double tn = runtime(start, end);
-	
+
 	// Write runtime and speedup to stats file
 	statFile << "runtime: " << tn << endl << "speedup: " << speedup(t1, tn) << endl << endl;
 

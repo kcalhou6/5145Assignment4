@@ -27,31 +27,29 @@ double speedup(double t1, double tn) {
 //argv[4] = granularity (chunk size)
 int main(int argc, char *argv[]) {
 	// Get argv[1] for the length of array
-	int numsLength = atoi(argv[1]);//(int)strtol(argv[1], NULL, 10);
+	int numsLength = atoi(argv[1]);
 	// Allocate space for array of length argv[1]
-	int* nums = (int *)(malloc(numsLength * sizeof(int)));
-	if (nums == NULL)
-		return -1;
+	int* nums = new int[numsLength];
 	// Initialize the array to random numbers
 	unsigned int seed = time(NULL);
-	for (int a = 0; a < numsLength; a++) {	
-		seed++;		
+	for (int a = 0; a < numsLength; a++) {
+		seed++;
 		nums[a] = rand_r(&seed);
 	}
-	
-	// Get argv[2] for the number of threads to use	
-	int numThreads = (int)strtol(argv[2], NULL, 10);
+
+	// Get argv[2] for the number of threads to use
+	int numThreads = atoi(argv[2]);
 	// Set openMP num threads
 	omp_set_num_threads(numThreads);
-	
+
 	// Get argv[3] for the schedule policy to use
-	int schedule = (int)strtol(argv[3], NULL, 10);
-	
+	int schedule = atoi(argv[3]);
+
 	//Variables to calculate and write runtime to a file
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
-	
+
 	// Calculate sequential runtime and write to stats file
 	clock_gettime(CLOCK_REALTIME, &start);
 	int minimum = INT_MAX;
@@ -61,48 +59,46 @@ int main(int argc, char *argv[]) {
 	clock_gettime(CLOCK_REALTIME, &end);
 	double t1 = runtime(start, end);
 	statFile << "Reduce_A4" << endl << "Sequential runtime:" << t1 << endl;
+	statFile << "min: " << minimum << endl;
 
 	// argv[3]=0 for static scheduling
 	if (schedule == 0) {
-		/*
-		 * Using this method to set schedule type as static requires chunk length input
-		 * set the chunk length as a uniform as n/threads
-		 */		
-		omp_set_schedule(omp_sched_static, (numsLength/numThreads));
-
 		// Write schedule info to stats file
 		statFile << "Static Scheduling using " << (numThreads) << " threads" << endl;
-	} 
+
+		// find the minimum value in parallel with omp reduction
+		clock_gettime(CLOCK_REALTIME, &start);
+		#pragma omp parallel for reduction(min: minimum) schedule(static)
+		for (int a = 0; a < numsLength; a++)
+			if (nums[a] < minimum)
+				minimum = nums[a];
+		clock_gettime(CLOCK_REALTIME, &end);
+	}
 	// argv[3]!=0 for dynamic scheduling and argv[4] granularity
 	else {
-		// get argv[4] for the granularity	
+		// get argv[4] for the granularity
 		int granularity = (int)strtol(argv[4], NULL, 10);
-
-		// set the schedule to type to dynamic and the provided granularity 
-		omp_set_schedule(omp_sched_dynamic, granularity);
 
 		// Write schedule info to stats file
 		statFile << "Dynamic Scheduling using " << (numThreads) << " threads and granularity " << granularity << endl;
+
+		// find the minimum value in parallel with omp reduction
+		clock_gettime(CLOCK_REALTIME, &start);
+		#pragma omp parallel for reduction(min: minimum) schedule(dynamic, granularity)
+		for (int a = 0; a < numsLength; a++)
+			if (nums[a] < minimum)
+				minimum = nums[a];
+		clock_gettime(CLOCK_REALTIME, &end);
 	}
-	
+
 	minimum = INT_MAX;
 
-	/*
-	 * find the minimum value in parallel with omp reduction and write the runtime and speedup
-	 * to the stats file
-	 */
-	clock_gettime(CLOCK_REALTIME, &start);	
-	#pragma omp parallel for reduction(min: minimum)
-	for (int a = 0; a < numsLength; a++)
-		if (nums[a] < minimum)
-			minimum = nums[a];
-	clock_gettime(CLOCK_REALTIME, &end);
 	double tn = runtime(start, end);
 	statFile << "runtime: " << tn << endl << "speedup: " << speedup(t1, tn) << endl << endl;
+	statFile << "min: " << minimum << endl;
 
 	// Free the memory allocated for the array
-	free(nums);	
+	delete[] nums;
 
 	return 0;
 }
-
