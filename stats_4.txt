@@ -1,0 +1,60 @@
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000746402
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 0.000415011
+speedup: 1.79851
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000455146
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 0.000287365
+speedup: 1.58386
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000692501
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 0.000202618
+speedup: 3.41777
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000657139
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 0.000280214
+speedup: 2.34513
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000416815
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 0.000207355
+speedup: 2.01015
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000421385
+Dynamic Scheduling using 1 threads and granularity 1000
+runtime: 0.000413041
+speedup: 1.0202
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000416082
+Dynamic Scheduling using 2 threads and granularity 1000
+runtime: 0.000267095
+speedup: 1.55781
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000421067
+Dynamic Scheduling using 4 threads and granularity 1000
+runtime: 0.000252907
+speedup: 1.66491
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000423064
+Dynamic Scheduling using 8 threads and granularity 1000
+runtime: 0.000264853
+speedup: 1.59735
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.00072711
+Dynamic Scheduling using 16 threads and granularity 1000
+runtime: 0.000213831
+speedup: 3.4004
+
