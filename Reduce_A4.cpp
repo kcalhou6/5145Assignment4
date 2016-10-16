@@ -61,6 +61,8 @@ int main(int argc, char *argv[]) {
 	statFile << "Reduce_A4" << endl << "Sequential runtime:" << t1 << endl;
 	statFile << "min: " << minimum << endl;
 
+	minimum = INT_MAX;
+
 	// argv[3]=0 for static scheduling
 	if (schedule == 0) {
 		// Write schedule info to stats file
@@ -91,11 +93,9 @@ int main(int argc, char *argv[]) {
 		clock_gettime(CLOCK_REALTIME, &end);
 	}
 
-	minimum = INT_MAX;
-
 	double tn = runtime(start, end);
-	statFile << "runtime: " << tn << endl << "speedup: " << speedup(t1, tn) << endl << endl;
-	statFile << "min: " << minimum << endl;
+	statFile << "runtime: " << tn << endl << "speedup: " << speedup(t1, tn) << endl;
+	statFile << "min: " << minimum << endl << endl;
 
 	// Free the memory allocated for the array
 	delete[] nums;
