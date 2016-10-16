@@ -46,6 +46,7 @@ int main(int argc, char *argv[]) {
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
+	statFile << "Reduce_A4" << endl << "Array Length: " << numsLength << endl;
 
 	minimum = INT_MAX;
 

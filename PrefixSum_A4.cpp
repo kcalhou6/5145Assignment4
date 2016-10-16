@@ -33,9 +33,8 @@ int main(int argc, char *argv[]) {
 	// Initialize the array to random numbers
 	unsigned int seed = time(NULL);
 	for (int a = 0; a < numsLength; a++) {
-		//seed++;
-		//nums[a] = rand_r(&seed);
-		nums[a] = 1;
+		seed++;
+		nums[a] = rand_r(&seed);
 	}
 
 	// Get argv[2] for the number of threads to use
@@ -47,6 +46,7 @@ int main(int argc, char *argv[]) {
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
+	statFile << "PrefixSum_A4" << endl << "Array Length: " << numsLength << endl;
 
 	// Allocate space for array of length argv[2]
 	int * sub = new int[numThreads];

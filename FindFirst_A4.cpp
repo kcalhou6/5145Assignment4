@@ -56,6 +56,7 @@ int main(int argc, char *argv[]) {
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
+	statFile << "FindFirst_A4" << endl << "Array Length: " << numsLength << endl;
 
 	// complex == 0 denotes time complexity n
 	if (complex == 0) {

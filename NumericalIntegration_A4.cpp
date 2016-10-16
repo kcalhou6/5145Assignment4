@@ -63,6 +63,8 @@ int main(int argc, char *argv[]) {
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
+	statFile << "NumericalIntegration_A4" << endl << "Array Length: " << numsLength << endl;
+	statFile << "Number of Points: " << n << endl << "Intensity: " << intensity << endl;
 
 	// Set the schedule type to dynamic and granularity to argv[7]
 	int granularity = (int)strtol(argv[7], NULL, 10);

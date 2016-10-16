@@ -45,10 +45,7 @@ int main(int argc, char *argv[]) {
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
-
-	// Return values to original in order to run loop on the same data as sequential had
-	for (int a = 0; a < numsLength; a++)
-		nums[a] = cbrt(nums[a]);
+	statFile << "Transform_A4" << endl << "Array Length: " << numsLength << endl;
 
 	/*
 	 * cube all of the values in the array in parallel with omp for and write the runtime
