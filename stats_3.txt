@@ -1,0 +1,145 @@
+FindFirst_A4
+Sequential runtime:0.140708
+pos: 99999999
+Static scheduling using 1 threads for (n) complexity 
+runtime: 0.0401837
+speedup: 3.50163
+pos: 99999999
+
+FindFirst_A4
+Sequential runtime:0.140377
+pos: 99999999
+Static scheduling using 2 threads for (n) complexity 
+runtime: 0.0267667
+speedup: 5.24448
+pos: 99999999
+
+FindFirst_A4
+Sequential runtime:0.140353
+pos: 99999999
+Static scheduling using 4 threads for (n) complexity 
+runtime: 0.0245799
+speedup: 5.71005
+pos: 99999999
+
+FindFirst_A4
+Sequential runtime:0.140368
+pos: 99999999
+Static scheduling using 8 threads for (n) complexity 
+runtime: 0.0242225
+speedup: 5.79493
+pos: 99999999
+
+FindFirst_A4
+Sequential runtime:0.140666
+pos: 99999999
+Static scheduling using 16 threads for (n) complexity 
+runtime: 0.0241174
+speedup: 5.83254
+pos: 99999999
+
+FindFirst_A4
+Sequential runtime:0.0409093
+pos: 99929765
+Static,1 scheduling using 1 threads for (pos) complexity 
+runtime: 0.162583
+speedup: 0.25162
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0411822
+pos: 99929765
+Static,1 scheduling using 2 threads for (pos) complexity 
+runtime: 0.0840993
+speedup: 0.489685
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0409085
+pos: 99929765
+Static,1 scheduling using 4 threads for (pos) complexity 
+runtime: 0.0545579
+speedup: 0.749818
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0408903
+pos: 99929765
+Static,1 scheduling using 8 threads for (pos) complexity 
+runtime: 0.055319
+speedup: 0.739173
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0411938
+pos: 99929765
+Static,1 scheduling using 16 threads for (pos) complexity 
+runtime: 0.0634427
+speedup: 0.649308
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0507249
+pos: 99929765
+Static,1 scheduling using 1 threads for (pos) complexity 
+runtime: 0.163592
+speedup: 0.310069
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0406309
+pos: 99929765
+Static,1 scheduling using 2 threads for (pos) complexity 
+runtime: 0.0840585
+speedup: 0.483365
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0411959
+pos: 99929765
+Static,1 scheduling using 4 threads for (pos) complexity 
+runtime: 0.0546937
+speedup: 0.753211
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0433678
+pos: 99929765
+Static,1 scheduling using 8 threads for (pos) complexity 
+runtime: 0.0537469
+speedup: 0.806889
+pos: 99929765
+
+FindFirst_A4
+Sequential runtime:0.0410692
+pos: 99929765
+Static,1 scheduling using 16 threads for (pos) complexity 
+runtime: 0.0635976
+speedup: 0.645766
+pos: 99929765
+
+PrefixSum_A4
+Sequential runtime:0.489856
+runtime: 0.778739
+speedup: 0.629037
+
+PrefixSum_A4
+Sequential runtime:0.48953
+runtime: 0.787667
+speedup: 0.621494
+
+PrefixSum_A4
+Sequential runtime:0.489381
+runtime: 0.780235
+speedup: 0.627222
+
+PrefixSum_A4
+Sequential runtime:0.489285
+runtime: 0.758172
+speedup: 0.645348
+
+PrefixSum_A4
+Sequential runtime:0.489333
+runtime: 0.790085
+speedup: 0.619342
+
