@@ -1,0 +1,433 @@
+Transform_A4
+Sequential runtime:5.9558
+Static Scheduling using 1 threads
+runtime: 6.52454
+speedup: 0.912831
+
+Transform_A4
+Sequential runtime:5.94939
+Static Scheduling using 2 threads
+runtime: 3.26724
+speedup: 1.82092
+
+Transform_A4
+Sequential runtime:6.00977
+Static Scheduling using 4 threads
+runtime: 1.6361
+speedup: 3.67322
+
+Transform_A4
+Sequential runtime:5.94901
+Static Scheduling using 8 threads
+runtime: 0.865148
+speedup: 6.8763
+
+Transform_A4
+Sequential runtime:6.00691
+Static Scheduling using 16 threads
+runtime: 0.440679
+speedup: 13.631
+
+Transform_A4
+Sequential runtime:5.9536
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 7.46693
+speedup: 0.797329
+
+Transform_A4
+Sequential runtime:6.01492
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 9.31714
+speedup: 0.645576
+
+Transform_A4
+Sequential runtime:6.01235
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 16.1154
+speedup: 0.373081
+
+Transform_A4
+Sequential runtime:6.0235
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 16.802
+speedup: 0.358498
+
+Transform_A4
+Sequential runtime:5.95787
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 16.6654
+speedup: 0.3575
+
+Transform_A4
+Sequential runtime:6.01598
+Dynamic Scheduling using 1 threads and granularity 1000
+runtime: 6.51586
+speedup: 0.923282
+
+Transform_A4
+Sequential runtime:5.95399
+Dynamic Scheduling using 2 threads and granularity 1000
+runtime: 3.28677
+speedup: 1.8115
+
+Transform_A4
+Sequential runtime:5.95267
+Dynamic Scheduling using 4 threads and granularity 1000
+runtime: 1.63926
+speedup: 3.63132
+
+Transform_A4
+Sequential runtime:6.01845
+Dynamic Scheduling using 8 threads and granularity 1000
+runtime: 0.86644
+speedup: 6.94619
+
+Transform_A4
+Sequential runtime:5.95371
+Dynamic Scheduling using 16 threads and granularity 1000
+runtime: 0.434432
+speedup: 13.7046
+
+Transform_A4
+Sequential runtime:5.9491
+Dynamic Scheduling using 1 threads and granularity 100000
+runtime: 6.5126
+speedup: 0.913475
+
+Transform_A4
+Sequential runtime:5.94374
+Dynamic Scheduling using 2 threads and granularity 100000
+runtime: 3.26179
+speedup: 1.82223
+
+Transform_A4
+Sequential runtime:5.95371
+Dynamic Scheduling using 4 threads and granularity 100000
+runtime: 1.63314
+speedup: 3.64557
+
+Transform_A4
+Sequential runtime:6.01272
+Dynamic Scheduling using 8 threads and granularity 100000
+runtime: 0.864112
+speedup: 6.95827
+
+Transform_A4
+Sequential runtime:5.94907
+Dynamic Scheduling using 16 threads and granularity 100000
+runtime: 0.435629
+speedup: 13.6563
+
+Reduce_A4
+Sequential runtime:0.0452084
+min: 416
+Static Scheduling using 1 threads
+runtime: 0.0467272
+speedup: 0.967497
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0275912
+min: 416
+Static Scheduling using 2 threads
+runtime: 0.0247925
+speedup: 1.11288
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276497
+min: 40
+Static Scheduling using 4 threads
+runtime: 0.0236274
+speedup: 1.17024
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.027566
+min: 50
+Static Scheduling using 8 threads
+runtime: 0.0236991
+speedup: 1.16317
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.027738
+min: 13
+Static Scheduling using 16 threads
+runtime: 0.0238407
+speedup: 1.16347
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0277072
+min: 465
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 1.2357
+speedup: 0.0224222
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0277884
+min: 1
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 6.4461
+speedup: 0.00431089
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0452858
+min: 40
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 8.65335
+speedup: 0.00523333
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0274667
+min: 1
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 12.7143
+speedup: 0.0021603
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0453164
+min: 465
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 15.2972
+speedup: 0.00296239
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.027609
+min: 661
+Dynamic Scheduling using 1 threads and granularity 1000
+runtime: 0.0305506
+speedup: 0.903715
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276591
+min: 661
+Dynamic Scheduling using 2 threads and granularity 1000
+runtime: 0.0272427
+speedup: 1.01528
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0277335
+min: 40
+Dynamic Scheduling using 4 threads and granularity 1000
+runtime: 0.0191004
+speedup: 1.45199
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276984
+min: 1
+Dynamic Scheduling using 8 threads and granularity 1000
+runtime: 0.0142596
+speedup: 1.94245
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276596
+min: 13
+Dynamic Scheduling using 16 threads and granularity 1000
+runtime: 0.0123999
+speedup: 2.23063
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276321
+min: 13
+Dynamic Scheduling using 1 threads and granularity 100000
+runtime: 0.0275262
+speedup: 1.00385
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276815
+min: 170
+Dynamic Scheduling using 2 threads and granularity 100000
+runtime: 0.019626
+speedup: 1.41045
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276627
+min: 40
+Dynamic Scheduling using 4 threads and granularity 100000
+runtime: 0.0126984
+speedup: 2.17843
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.0276816
+min: 50
+Dynamic Scheduling using 8 threads and granularity 100000
+runtime: 0.00868028
+speedup: 3.18902
+
+min: 2147483647
+Reduce_A4
+Sequential runtime:0.027543
+min: 13
+Dynamic Scheduling using 16 threads and granularity 100000
+runtime: 0.00873856
+speedup: 3.1519
+
+min: 2147483647
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000463759
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 0.00041446
+speedup: 1.11895
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000417273
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 0.000271952
+speedup: 1.53436
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000417243
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 0.000174132
+speedup: 2.39613
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000421415
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 0.000242356
+speedup: 1.73883
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000702391
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 0.000259617
+speedup: 2.70549
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0138037
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 0.0131454
+speedup: 1.05008
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0140699
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 0.00663736
+speedup: 2.1198
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0140845
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 0.00336411
+speedup: 4.18669
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0137235
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 0.00187338
+speedup: 7.3255
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0137581
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 0.00174691
+speedup: 7.87569
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000418517
+Dynamic Scheduling using 1 threads and granularity 1000
+runtime: 0.000412061
+speedup: 1.01567
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.00042115
+Dynamic Scheduling using 2 threads and granularity 1000
+runtime: 0.000281993
+speedup: 1.49348
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000417507
+Dynamic Scheduling using 4 threads and granularity 1000
+runtime: 0.000175955
+speedup: 2.37281
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000417242
+Dynamic Scheduling using 8 threads and granularity 1000
+runtime: 0.000282246
+speedup: 1.47829
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.000443773
+Dynamic Scheduling using 16 threads and granularity 1000
+runtime: 0.00267343
+speedup: 0.165994
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.01385
+Dynamic Scheduling using 1 threads and granularity 1000
+runtime: 0.0131457
+speedup: 1.05357
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0138148
+Dynamic Scheduling using 2 threads and granularity 1000
+runtime: 0.00676575
+speedup: 2.04187
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0138029
+Dynamic Scheduling using 4 threads and granularity 1000
+runtime: 0.00335578
+speedup: 4.11317
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0141361
+Dynamic Scheduling using 8 threads and granularity 1000
+runtime: 0.00188144
+speedup: 7.51349
+
+NumericalIntegration_A4, number of points: 1000
+Sequential runtime:0.0140926
+Dynamic Scheduling using 16 threads and granularity 1000
+runtime: 0.00105481
+speedup: 13.3604
+
+NumericalIntegration_A4, number of points: 1000000000
+Sequential runtime:371.036
+Dynamic Scheduling using 1 threads and granularity 1
+runtime: 374.686
+speedup: 0.990258
+
+NumericalIntegration_A4, number of points: 1000000000
+Sequential runtime:371.114
+Dynamic Scheduling using 2 threads and granularity 1
+runtime: 193.321
+speedup: 1.91968
+
+NumericalIntegration_A4, number of points: 1000000000
+Sequential runtime:370.794
+Dynamic Scheduling using 4 threads and granularity 1
+runtime: 103.021
+speedup: 3.59919
+
+NumericalIntegration_A4, number of points: 1000000000
+Sequential runtime:370.811
+Dynamic Scheduling using 8 threads and granularity 1
+runtime: 56.6512
+speedup: 6.54552
+
+NumericalIntegration_A4, number of points: 1000000000
+Sequential runtime:370.918
+Dynamic Scheduling using 16 threads and granularity 1
+runtime: 29.8665
+speedup: 12.4192
+
+NumericalIntegration_A4, number of points: 1000000000
+Sequential runtime:13678.8
+Dynamic Scheduling using 1 threads and granularity 1
