@@ -58,6 +58,8 @@ int main(int argc, char *argv[]) {
 	statFile.open("stats.txt", ios::app);
 	statFile << "FindFirst_A4" << endl << "Array Length: " << numsLength << endl;
 
+	int pos;
+
 	// complex == 0 denotes time complexity n
 	if (complex == 0) {
 		pos = INT_MAX;
@@ -76,8 +78,6 @@ int main(int argc, char *argv[]) {
 	}
 	// complex != 0 denotes time complexity pos
 	else {
-<<<<<<< HEAD
-=======
 		// Calculate sequential runtime and write to stats file
 		clock_gettime(CLOCK_REALTIME, &start);
 		int pos = -1;
@@ -91,8 +91,6 @@ int main(int argc, char *argv[]) {
 		statFile << "FindFirst_A4" << endl << "Sequential runtime:" << t1 << endl;
 		statFile << "pos: " << pos << endl;
 
-
->>>>>>> bd209d6ef0c2e81a25c82e127108a95ac533eafa
 		pos = INT_MAX;
 		bool stop = false;
 		// Mark time right before start of parallel loop
@@ -107,13 +105,8 @@ int main(int argc, char *argv[]) {
 			}
 		clock_gettime(CLOCK_REALTIME, &end);
 		double tn = runtime(start, end);
-<<<<<<< HEAD
 		statFile << "Static,1 scheduling using " << numThreads << " threads for (n) complexity " << endl;
 		statFile << "runtime: " << tn << endl << "pos: " << pos << endl << endl;
-=======
-		statFile << "Static,1 scheduling using " << numThreads << " threads for (pos) complexity " << endl;
-		statFile << "runtime: " << tn << endl << "speedup: " << speedup(t1, tn) << endl << "pos: " << pos << endl << endl;
->>>>>>> bd209d6ef0c2e81a25c82e127108a95ac533eafa
 	}
 
 	// Free the memory allocated for the array

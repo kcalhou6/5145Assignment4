@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	timespec start, end;
 	ofstream statFile;
 	statFile.open("stats.txt", ios::app);
-	statFile << "NumericalIntegration_A4" << endl << "Array Length: " << numsLength << endl;
+	statFile << "NumericalIntegration_A4" << endl;
 	statFile << "Number of Points: " << n << endl << "Intensity: " << intensity << endl;
 
 	// Set the schedule type to dynamic and granularity to argv[7]
@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
 	// Write schedule info to stats file
 	statFile << "Dynamic Scheduling using " << numThreads << " threads and granularity " << granularity << endl;
 
-	approx = 0;
+	double approx = 0;
 	// Mark time right before start of parallel loop
 	clock_gettime(CLOCK_REALTIME, &start);
 	// execute numerical integration in parallel with omp

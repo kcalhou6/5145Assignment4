@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 	statFile.open("stats.txt", ios::app);
 	statFile << "Reduce_A4" << endl << "Array Length: " << numsLength << endl;
 
-	minimum = INT_MAX;
+	int minimum = INT_MAX;
 
 	// argv[3]=0 for static scheduling
 	if (schedule == 0) {
