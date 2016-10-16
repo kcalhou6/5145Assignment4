@@ -101,7 +101,7 @@ int main(int argc, char *argv[]) {
 			}
 		clock_gettime(CLOCK_REALTIME, &end);
 		double t1 = runtime(start, end);
-		statFile << "Reduce_A4" << endl << "Sequential runtime:" << t1 << endl;
+		statFile << "FindFirst_A4" << endl << "Sequential runtime:" << t1 << endl;
 		statFile << "pos: " << pos << endl;
 
 
@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
 			}
 		clock_gettime(CLOCK_REALTIME, &end);
 		double tn = runtime(start, end);
-		statFile << "Static,1 scheduling using " << numThreads << " threads for (n) complexity " << endl;
+		statFile << "Static,1 scheduling using " << numThreads << " threads for (pos) complexity " << endl;
 		statFile << "runtime: " << tn << endl << "speedup: " << speedup(t1, tn) << endl << "pos: " << pos << endl << endl;
 	}
 
